@@ -1,0 +1,165 @@
+BODY {
+    margin: 0;
+    padding: 1em;
+    font: 16px/1.75 Trebuchet Ms, Arial, sans-serif;
+    color: black;
+}
+
+H2 {
+    margin: 0;
+    margin-bottom: 5px;
+    font-size: 15px;
+}
+
+.wrapper {
+    width: 50%;
+    min-width: 600px;
+    margin: auto;
+}
+
+.view-stub__input-block {
+    width: 100%;
+    margin: 35px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.view-stub__input {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 2px solid #CCC;
+    border-radius: 3px;
+    flex-basis: 100%;
+    font: inherit;
+    transition: all .25s;
+}
+
+.view-stub__input:focus {
+    outline: none;
+    border-color: #333;
+}
+
+.view-stub__btns {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.view-stub__btn {
+    margin-left: 10px;
+    padding: 5px 15px;
+    box-shadow: none;
+    border: 2px solid rgba(0, 0, 0, .35);
+    border-radius: 3px;
+    cursor: pointer;
+    font: inherit;
+    line-height: 28px;
+    color: #000;
+    transition: all .25s;
+}
+
+.view-stub__btn:disabled {
+    opacity: .5;
+    cursor: default;
+    filter: saturate(80%);
+    color: rgba(0, 0, 0, .35);
+}
+
+.view-stub__btn--apply {
+    background-color: #FFDB4D;
+}
+
+.view-stub__btn--delete {
+    background-color: orangered;
+}
+
+.view-stub__btn--all {
+    background-color: #999;
+}
+
+.view-stub__response {
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 3px;
+    background-color: palegoldenrod;
+    color: black;
+}
+
+.stream {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+}
+
+.stream__item {
+    flex-basis: 48%;
+}
+
+.stream__item--log {
+    flex-grow: 1;
+}
+
+.stream__item--result {
+    max-width: 0;
+    overflow: hidden;
+}
+
+.stream__item--result-expanded {
+    max-width: 100%;
+    margin-left: 10px;
+}
+
+.stream__log,
+.stream__result {
+    box-sizing: border-box;
+    border-radius: 3px;
+}
+
+.stream__log {
+    max-height: 50vh;
+    overflow: auto;
+    padding: 10px 0;
+    background-color: #EEE;
+}
+
+.stream__result {
+    padding: 10px;
+    border: 2px solid #DDD;
+}
+
+.stream__result I {
+    color: #CCC;
+}
+
+.log {
+    display: flex;
+    flex-direction: column;
+}
+
+.log--reverse {
+    flex-direction: column-reverse;
+}
+
+.log__message {
+    position: relative;
+    padding: 3px 10px;
+    flex-shrink: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-bottom: 1px solid #BBB;
+}
+
+.log__message:last-child,
+.log--reverse .log__message:first-child {
+    border-bottom: none;
+}
+
+.log--reverse .log__message:last-child {
+    border-bottom: 1px solid #BBB;
+}
+
+.log__event {
+    opacity: .25;
+    font-size: .8em;
+}

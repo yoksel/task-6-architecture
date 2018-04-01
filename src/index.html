@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Архитектура. ШРИ-2018</title>
+    </head>
+    <body>
+        <div class="wrapper">
+            <h1>Архитектура приложения</h1>
+
+            <div class="view-stub">
+                <div class="view-stub__input-block">
+                    <input
+                        class="view-stub__input"
+                        placeholder="Введите хоть что-нибудь"/>
+                    <div class="view-stub__btns">
+                        <button class="view-stub__btn view-stub__btn--apply">Отправить</button>
+                        <button
+                            class="view-stub__btn view-stub__btn--all"
+                            data-text-show="Показать хранилище"
+                            data-text-hide="Скрыть хранилище"
+                            >Показать хранилище</button>
+                        <button class="view-stub__btn view-stub__btn--delete">Удалить всё</button>
+                    </div>
+                </div>
+                <h2>Ответ с сервера</h2>
+                <div class="view-stub__response">...</div>
+            </div>
+
+            <div class="stream">
+                <div class="stream__item stream__item--log">
+                    <h2>Логи
+                        <button
+                            type="button"
+                            class="stream__btn-reverse"
+                            data-text-new="&darr; от новых к старым"
+                            data-text-old="&darr; от старых к новым"
+                        >&darr; от новых к старым</button></h2>
+                    <div class="stream__log log">
+                        <div class="log__message">...</div>
+                    </div>
+                </div>
+                <div class="stream__item stream__item--result">
+                    <h2>Хранилище</h2>
+                    <div class="stream__result">...</div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
