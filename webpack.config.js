@@ -7,10 +7,6 @@ const autoprefixer = require('autoprefixer');
 module.exports = {
     entry: './src/app.js',
 
-    devServer: {
-        contentBase: 'dist'
-    },
-
     mode: 'development',
 
     module: {
