@@ -15,23 +15,31 @@ class MyStore extends Store {
     onDispatch(payload) {
         const func = this.actions[payload.event].bind(this);
         func(payload.data);
-        this.changed = true;
     }
 
     addItem(item) {
         this.items.push(item);
         this.response.message = `📥 Текст «${item}» добавлен в хранилище`;
+        this.changed = true;
     }
 
     getItems() {
-        this.response.data = this.items;
-        this.response.message = '📦 Получено содержимое хранилища';
+        if (this.changed){
+            this.response.data = this.items;
+            this.response.message = '📦 Получено содержимое хранилища';
+        }
+        else {
+            this.response.message = '📦 Cодержимое хранилища не менялось';
+        }
+
+        this.changed = false;
     }
 
     deleteItems() {
         this.items = [];
         this.response.data = this.items;
         this.response.message = '🗑 Cодержимое хранилища удалено';
+        this.changed = true;
     }
 }
 

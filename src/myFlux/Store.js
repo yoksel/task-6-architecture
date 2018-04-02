@@ -22,7 +22,6 @@ class Store extends Observer {
     }
 
     invokeOnDispatch(payload) {
-        this.changed = false;
         this.response.event = 'SERVER_GETS_DATA',
         this.response.message = '⤵️ Хранилище получило запрос';
 
@@ -30,9 +29,7 @@ class Store extends Observer {
 
         this.onDispatch(payload);
 
-        if (this.changed) {
-            this.emitChange(payload);
-        }
+        this.emitChange(payload);
     }
 
     onDispatch(payload) {
@@ -48,7 +45,6 @@ class Store extends Observer {
 
         this.response.event = payload.event;
         this.broadcast(this.response);
-        this.changed = true;
     }
 }
 
