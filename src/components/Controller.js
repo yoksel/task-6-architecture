@@ -1,4 +1,4 @@
-import {Observer} from './myFlux/Observer';
+import {Observer} from '../myFlux/Observer';
 
 class Controller extends Observer {
 

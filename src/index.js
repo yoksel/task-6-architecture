@@ -3,8 +3,8 @@ import './styles.css';
 import {Dispatcher} from './myFlux/Dispatcher';
 import {Log} from './myFlux/Log';
 
-import {MyStore} from './MyStore';
-import {Controller} from './Controller';
+import {MyStore} from './components/MyStore';
+import {Controller} from './components/Controller';
 
 const dispatcher = new Dispatcher();
 const store = new MyStore(dispatcher);

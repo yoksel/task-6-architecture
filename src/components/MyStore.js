@@ -1,4 +1,4 @@
-import {Store} from './myFlux/Store';
+import {Store} from '../myFlux/Store';
 
 class MyStore extends Store {
 
